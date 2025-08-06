@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int count = 0;
+        int x = n*n;
+        int temp = n;
+        
+        while(temp!=0)
+        {
+            count++;
+            temp = temp/10;
+        }
+        
+        int last = x % (int)Math.pow(10,count);
+        
+        if(n==last){
+            System.out.println("Automorphic");
+        }
+        else{
+            System.out.println("Not Automorphic");
+        }
+        sc.close();
+        
+        
+        
+    }
+}
