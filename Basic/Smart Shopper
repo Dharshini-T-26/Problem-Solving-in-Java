@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a  = sc.nextInt();
+        int b  = sc.nextInt();
+        int c = sc.nextInt();
+        int d  = sc.nextInt();
+        int e = sc.nextInt();
+        int f = sc.nextInt();
+        int g = sc.nextInt();
+        
+        float before = ((a*b)+(c*d)+(e*f));
+       double after = ((0.1* before)+before);
+        
+        System.out.printf("Total (Before Tax): %.2f \n",before);
+         System.out.printf("Total (After Tax): %.2f\n",after);
+        
+        
+        if (after <= g)
+            System.out.println("Within Budget");
+        else
+            System.out.println("Over Budget");
+        sc.close();
+    }
+}
