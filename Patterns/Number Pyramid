@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        
+        for(int i=0;i<n;i++)
+        {
+            int val =1;
+            int sp = n-i-1;
+            for(int j=0;j<sp;j++)
+            {
+                
+                System.out.print(" ");
+            }
+            for(int k=0;k<=i;k++)
+            {
+                System.out.print(val+" ");
+                val++;
+            }
+            System.out.println();
+        }
+        
+        s.close();
+    }
+}
