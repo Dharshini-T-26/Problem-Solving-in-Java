@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n=s.nextInt();
+        n = Math.abs(n);
+        int temp =n;
+        int max = 0;
+        int min =9;
+        
+        if(n==0)
+        {
+            max = 0;
+            min =0;
+        }
+        
+        while(n>0)
+        {
+            temp=n%10;
+            if(temp>max)
+            {
+               max = temp;
+            }
+            if(temp<min)
+            {
+                min = temp;
+            }
+            n /= 10;
+        }
+        System.out.print(max +" "+min);
+        s.close();
+    }
+}
