@@ -1,0 +1,16 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        
+        if(n%7==0 || n%10==7)
+            System.out.println("Buzz Number");
+        else
+            System.out.println("Not Buzz Number");
+        s.close();
+    }
+}
