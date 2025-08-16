@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n=sc.nextInt();
+        int sumEven=0;
+        int sumOdd=0;
+        n = Math.abs(n); 
+        while(n!=0)
+        {
+            int rem=n%10;
+            if(rem%2==0)
+             {
+                sumEven=sumEven+rem;    
+             }
+            else
+            {
+                int odd=rem;
+                sumOdd=sumOdd+odd;   
+            }
+            n=n/10;
+        }
+        System.out.println(sumOdd+" "+sumEven);
+
+            
+    }
+}
