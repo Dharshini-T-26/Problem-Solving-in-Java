@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+        int a = s.nextInt();
+        int b = s.nextInt();
+        
+        // Handle edge cases with 0 explicitly
+        if (a == 0) {
+            System.out.println(b);
+        }
+        if (b == 0) {
+            System.out.println(a);
+        }
+        
+        // Euclidean algorithm using loop
+        while (a != b) {
+            if (a > b) {
+                a = a - b;
+            } else {
+                b = b - a;
+            }
+        }
+        
+        System.out.println(a);  // or b (both are equal here)
+    }
+}
